@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/contacts/contacts-actions';
+import { deleteContact } from '../../redux/contacts/contacts-operations';
 import Button from 'components/Button';
 import { MdPhoneAndroid } from 'react-icons/md';
 import { createUseStyles } from 'react-jss';
@@ -43,7 +43,6 @@ const ContactItem = ({ name, number, id }) => {
 ContactItem.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
-  // onDelete: PropTypes.func.isRequired,
 };
 
 export default ContactItem;

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 // import { connect } from 'react-redux';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contacts/contacts-actions';
+// import { addContact } from '../../redux/contacts/contacts-actions';
+import { addContact } from '../../redux/contacts/contacts-operations';
 import { getContacts } from '../../redux/contacts/contacts-selectors';
 // import PropTypes from 'prop-types';
 // import { v4 as uuid } from 'uuid';
@@ -15,9 +16,8 @@ const ContactsInputForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const contacts = useSelector(getContacts);
-  // const contacts = useSelector(state => state.contacts.items);
-  const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
   const handleInputChange = ({ target }) => {
     const { value, name } = target;
     name === 'name' ? setName(value) : setNumber(value);
@@ -41,12 +41,7 @@ const ContactsInputForm = () => {
       swal('Warning!', `${name} is already in contacts!`, 'warning');
       return;
     }
-    // const newContact = {
-    //   id: uuid(),
-    //   name,
-    //   number,
-    // };
-    // dispatch(addContact(newContact));
+
     dispatch(addContact(name, number));
     setName('');
     setNumber('');

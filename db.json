@@ -1,9 +1,14 @@
 {
   "contacts": [
     {
-      "id": "fc08c6ca-3987-45ac-873e-68a939b9041b",
-      "name": "ArtemS",
-      "number": "36640-654-5400"
+      "name": "Artem Sergieiev",
+      "number": "36640-654-5400",
+      "id": 1
+    },
+    {
+      "name": "Artem S",
+      "number": "11140-654-5400",
+      "id": 2
     }
   ]
 }

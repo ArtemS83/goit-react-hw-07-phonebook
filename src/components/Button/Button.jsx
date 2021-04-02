@@ -16,14 +16,12 @@ const Button = ({ title, type, onDelete }) => {
 Button.defaultProps = {
   title: 'button',
   type: 'button',
-  // id: '',
   onDelete: () => {},
 };
 
 Button.propTypes = {
   title: PropTypes.string,
   type: PropTypes.string,
-  // id: PropTypes.string,
   onDelete: PropTypes.func,
 };
 

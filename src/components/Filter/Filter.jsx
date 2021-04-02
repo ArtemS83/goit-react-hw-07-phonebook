@@ -7,7 +7,6 @@ import style from './Filter.module.scss';
 
 //====================Filter REDUX-HOOKS ===============//
 const Filter = ({ text }) => {
-  // const filter = useSelector(state => state.contacts.filter);
   const filter = useSelector(getFilter);
   const dispatch = useDispatch();
 
@@ -30,15 +29,8 @@ const Filter = ({ text }) => {
   );
 };
 
-Filter.defaultProps = {
-  text: '',
-  // filter: '',
-};
-
 Filter.propTypes = {
-  text: PropTypes.string,
-  // filter: PropTypes.string,
-  // onInputFindChange: PropTypes.func.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default Filter;

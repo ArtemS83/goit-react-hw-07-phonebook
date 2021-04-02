@@ -16,12 +16,8 @@ const Notification = ({ message }) => {
   return <p className={classes.title}>{message}</p>;
 };
 
-Notification.defaultProps = {
-  message: '',
-};
-
 Notification.propTypes = {
-  message: PropTypes.string,
+  message: PropTypes.string.isRequired,
 };
 
 export default Notification;
